@@ -1,3 +1,4 @@
 src/data/dataset/
 src/data/*.zip
 **/__pycache__
+*.pkl

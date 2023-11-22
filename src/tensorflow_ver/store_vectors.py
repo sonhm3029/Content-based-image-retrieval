@@ -7,6 +7,8 @@ import numpy as np
 import os
 import pickle
 
+from tqdm import tqdm
+
 
 # Build model to vectorized data
 vgg16_model = VGG16(weights="imagenet")
@@ -43,9 +45,9 @@ if __name__ == "__main__":
 
         count = 0
         # store data to binary file for next time import
-        root = "src/data/dataset"
+        root = "src/data/linh_dataset/6"
 
-        for img_pth in os.listdir(root):
+        for img_pth in tqdm(os.listdir(root)):
     
             img_fpath = f"{root}/{img_pth}"
             img_loaded = load_img(img_fpath)
